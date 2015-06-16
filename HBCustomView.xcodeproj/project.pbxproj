@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DE0024B31B1BF97E00FB33D8 /* Views in Resources */ = {isa = PBXBuildFile; fileRef = DE0024B21B1BF97E00FB33D8 /* Views */; };
+		DE0025121B2EA13000FB33D8 /* HBTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0025111B2EA13000FB33D8 /* HBTabBar.m */; };
 		DEF2F2531ADCFD1500203EB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF2F2521ADCFD1500203EB8 /* main.m */; };
 		DEF2F2561ADCFD1500203EB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF2F2551ADCFD1500203EB8 /* AppDelegate.m */; };
 		DEF2F2591ADCFD1500203EB8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF2F2581ADCFD1500203EB8 /* ViewController.m */; };
@@ -33,6 +34,9 @@
 
 /* Begin PBXFileReference section */
 		DE0024B21B1BF97E00FB33D8 /* Views */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Views; path = HBCustomView/Views; sourceTree = SOURCE_ROOT; };
+		DE0025101B2EA13000FB33D8 /* HBTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBTabBar.h; path = HBCustomView/Views/HBTabBar.h; sourceTree = "<group>"; };
+		DE0025111B2EA13000FB33D8 /* HBTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBTabBar.m; path = HBCustomView/Views/HBTabBar.m; sourceTree = "<group>"; };
+		DE0025131B2EA8D500FB33D8 /* Define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
 		DEF2F24D1ADCFD1400203EB8 /* HBCustomView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HBCustomView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEF2F2511ADCFD1500203EB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEF2F2521ADCFD1500203EB8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -76,6 +80,8 @@
 		DEF2F2441ADCFD1400203EB8 = {
 			isa = PBXGroup;
 			children = (
+				DE0025101B2EA13000FB33D8 /* HBTabBar.h */,
+				DE0025111B2EA13000FB33D8 /* HBTabBar.m */,
 				DEF2F27B1ADE0BC500203EB8 /* daijia.bundle */,
 				DEF2F27D1ADF844100203EB8 /* models */,
 				DE0024B21B1BF97E00FB33D8 /* Views */,
@@ -141,6 +147,7 @@
 			children = (
 				DEF2F2771ADCFE1800203EB8 /* HBTabbarViewController.h */,
 				DEF2F2781ADCFE1800203EB8 /* HBTabbarViewController.m */,
+				DE0025131B2EA8D500FB33D8 /* Define.h */,
 			);
 			name = Controllers;
 			path = HBCustomView/Controllers;
@@ -266,6 +273,7 @@
 				DEF2F2831ADF907B00203EB8 /* HBBarButton.m in Sources */,
 				DEF2F2801ADF848800203EB8 /* HBTabBarItem.m in Sources */,
 				DEF2F2531ADCFD1500203EB8 /* main.m in Sources */,
+				DE0025121B2EA13000FB33D8 /* HBTabBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

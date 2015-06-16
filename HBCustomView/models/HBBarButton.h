@@ -7,14 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+@class HBTabBarItem;
 #define kPreviousBtn @"previousBtn"
 
 typedef enum {
     TabItemUnSelected,
     TabItemSelected
-} TabState;
+} TabButtonState;
 @interface HBBarButton : UIButton
-@property (nonatomic, readwrite, assign) TabState btnState;
+@property (nonatomic, readwrite, assign) TabButtonState btnState;
+@property (nonatomic, strong)HBTabBarItem * item;
 
 - (void)btnStateDidChanged:(NSNotification *) noticifation;
 @end

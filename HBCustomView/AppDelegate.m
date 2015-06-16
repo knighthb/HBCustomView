@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "HBTabbarViewController.h"
+#import "HBTabBarItem.h"
 
 @interface AppDelegate ()
 
@@ -48,10 +49,15 @@
 
     _1stVC.tabBarItem.title = @"草泥马";
     _2ndVC.tabBarItem.title = @"caonima";
+    NSMutableArray * items = [[NSMutableArray alloc] init];
+    for (int i=0; i<4; i++) {
+        HBTabBarItem * item = [[HBTabBarItem alloc] initWithSelectedImg:[UIImage imageNamed:@"daijia.bundle/images/订单选中.png"] unSelectedImg:[UIImage imageNamed:@"daijia.bundle/images/订单.png"] title:@"hehe"];
+        [items addObject:item];
+    }
 //    UITabBarController * rootVC = [[UITabBarController alloc] init];
-    HBTabbarViewController * rootVC = [[HBTabbarViewController alloc] initWithViewcontrollers:vcs animated:YES];
+    HBTabbarViewController * rootVC = [[HBTabbarViewController alloc] initWithViewcontrollers:vcs tabBarItems:items animated:YES];
 
-    [rootVC setViewControllers:vcs];
+//    [rootVC setViewControllers:vcs];
     self.window.rootViewController = rootVC;
 
     

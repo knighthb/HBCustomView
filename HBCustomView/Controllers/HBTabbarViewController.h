@@ -8,23 +8,26 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
-@interface HBTabbarViewController : UIViewController
+#import "HBTabBar.h"
+//@protocol HBTabbarViewControllerDelegate <NSObject>
+//
+//- ()
+//
+//@end
+@class HBTabBar;
+@interface HBTabbarViewController : UIViewController<HBTabBarDelegate>
 {
-    NSMutableArray * _tabBarBtns;
     UIView * _topBar;
-    UIView * _bottomBar;
-    UILabel * _titleLabel;
+    HBTabBar * _tabBar;
 }
-@property (nonatomic, copy) NSString * title;
-@property (nonatomic, strong) UIBarButtonItem * barBtnItem;
-@property (nonatomic, strong) NSMutableArray * viewControllers;
+//@property (nonatomic, strong) NSMutableArray * viewControllers;
 @property (nonatomic, strong) UIViewController * currentController;
 @property (nonatomic, assign) NSInteger selectedIndex;
 @property (nonatomic, assign) BOOL animated;
 @property (nonatomic, strong) UIView * contentView;
-- (id) initWithViewcontrollers:(NSMutableArray *) controllers
-                      animated:(BOOL) animated;
-
+@property (nonatomic, copy  ) NSArray * tabBarItems;
+- (id)initWithViewcontrollers:(NSMutableArray *) controllers
+                  tabBarItems:(NSArray *) items
+                     animated:(BOOL) animated;
 
 @end

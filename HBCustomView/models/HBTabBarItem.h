@@ -8,20 +8,25 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+@class HBBarButton;
 
 typedef enum {
     TabItemEnable,
     TabItemDisable
-} TabState;
+} TabItemState;
 
 @interface HBTabBarItem : UIView{
 
 }
-@property (nonatomic, assign) TabState state;
+@property (nonatomic, assign) TabItemState state;
 @property (nonatomic, strong) UIImage * selectedImg;
 @property (nonatomic, strong) UIImage * unSelectedImg;
+@property (nonatomic, strong) NSString * title;
+@property (nonatomic, strong) HBBarButton * button;
 
-- (instancetype)initWithSelectedImg:(UIImage *) enableImg unSelectedImg:(UIImage *) disableImg;
+- (instancetype)initWithSelectedImg:(UIImage *) enableImg
+                      unSelectedImg:(UIImage *) disableImg
+                              title:(NSString *) title;
 
 
 @end
